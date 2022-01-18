@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Create Jobs
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <!-- CSS Files -->
+  <link  href= "{{ url_for('static',filename='css/bootstrap.min.css') }}" rel= "stylesheet">
+  <link  href= "{{ url_for('static',filename='css/now-ui-dashboard.css') }}" rel= "stylesheet">
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+<style>
+
+  body{
+    background:#fdd3d3;
+
+    }
+  .button {
+    text-decoration: none;
+
+    border: none;
+    color: white;
+    padding: 16px 42px;
+    text-align: center;
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+
+    margin: 1px 800px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 14px;
+  }
+  
+  .button1 {
+    background-color: #0000FF; 
+  }
+  
+  .button1:hover {
+    background-color: orange;
+    color: white;
+  }
+  
+h6{
+    margin:0px 300px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 27px;
+    color:green;
+}
+
+
+body{
+    background:#fdd3d3;
+
+}
+input#submit{
+    width:200px;
+    padding:7px;
+    margin:10px;
+    font-family: 'Raleway', sans-serif;
+
+    font-size:22px;
+    font-style:bold;
+    border-radius:3px;
+    background-color:red;
+    color:#fff;
+    border: 1px solid ;
+    box-shadow:1px 1px 5px 
+    rgba(0,0,0,0.3);
+}
+p2{
+    margin:180px 100px;
+    font-size:18px;
+}
+</style>  
+
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+
+        <a href="http://127.0.0.1:5000/" class="simple-text logo-normal">
+          NAMAL HRMS
+        </a>
+      </div>
+      <div class="sidebar-wrapper" id="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="/Dashboard">
+              <i class="fas fa-home"></i>
+
+              <p>Dashboard</p>
+              
+            </a>
+          </li>
+          <li>
+            <a href="/Candidates">
+              <i class="fas fa-child"></i>
+
+              <p>Candidates</p>
+            </a>
+          </li>
+          <li>
+
+            <a href="/Recruitment">
+              <i class="fab fa-wpforms"></i>
+
+              <p>Recruitment Jobs</p>
+            </a>
+          </li>
+          <li>
+            <a href="/Add Employee">
+              <i class="fas fa-user-plus"></i>
+
+              <p>Add Employees</p>
+            </a>
+          </li>
+          <li>
+            <a href="./icons.html">
+              <i class="fab fa-cc-amazon-pay"></i>              
+              <p>Payroll</p>
+            </a>
+          </li>
+          <li>
+          <li>
+            <a href="./user.html">
+              <i class="fas fa-user-circle"></i>              
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <i class="fas fa-question-circle"></i>              
+              <p>Help</p>
+            </a>
+          </li>
+          <li>
+            <a href="/Log Out">             
+            
+            
+            <i class="fas fa-sign-out-alt"></i>
+            <p>Logout</p>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel" id="main-panel">
+      <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <h1> Create Jobs</h1>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Search...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="fas fa-search"></i>                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+   
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                  <i class="fas fa-user"></i>                  <p>
+                    <span class="d-lg-none d-md-block">Account</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+                <div class="card-header ">
+                <h2> Post Jobs Now</h2>
+                </div>   
+                <div class="Container">
+                    <div class="title">New Job </div>
+                    <form method ="POST" action="">
+                        
+                        <div class="jobTitle">
+                            <label > Title </label>
+                            
+                            <input class="inp" type="text" name="title" id="name" >
+                        </div>
+                        <div class="catg">
+                            <label> Department </label>
+                            <select class="catagory" name="catagory">
+                                <option value="Department">Choose Department</option>
+                                <option value="finance">Finance</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="SE">Software Engineering</option>
+                                <option value="developer">Developer</option>
+                                <option value="g_Designer">Graphic Designer</option>
+                                <option value="C_writer">Content Writer</option>
+            
+                            </select>
+                        </div>
+                        <div class="type">
+                            <label> Type </label>
+                            <select class="typee" name="type">
+                                <option value="type">Choose Type</option>
+                                <option value="full time">Full Time</option>
+                                <option value="part time">Part Time</option>
+                                <option value="remote">Remote</option>
+                                <option value="intern">Intern</option>
+                            </select>
+                        </div>
+                        <div class="salary">
+                            <label> Salary</label>
+                            
+                            <input class="salr" type="text" name="salary" id="name" placeholder="Salary $">
+                            <br>
+                        </div>
+                        <div class="expire">
+                            <label> Experience </label>
+                            <select class="expiree" name="expire">
+                                <option >Choose Experience</option>
+                                <option >More than 6 months</option>
+                                <option >More than 1 year</option>
+                                <option >2 years</option>
+                                <option >4 years</option>
+                                <option> More than 5 years</option>
+            
+                            </select>
+                        </div>
+                        <div class="country">
+                            <label> Country </label>
+                            <select class="countr" name="country">
+                                <option value="country">Select Country</option>
+                                <option value="pakistan">Pakistan</option>
+                                <option value="india">India</option>
+                                <option value="usa">USA</option>
+                                <option value="uk">UK</option>
+                                <option value="bangladesh">Bangladesh</option>
+                                <option value="uae">UAE</option>
+                                <option value="australia">Australia</option>
+                            </select>
+                        </div>
+                        <input type="submit" value = "Create Job" name="submit" id="submit">
+                        <button type="clear"> Clear </button>
+                        <p2 class="message"> {{msg}} </p2>
+            
+                    </form>
+                </div>
+                
+              <div class="card-body ">
+                <div id="map" class="map"></div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+</body>
+
+</html>

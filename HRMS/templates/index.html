@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+    <link  href= "{{ url_for('static',filename='css/style2.css') }}" rel= "stylesheet">
+
+<style>
+body{
+    
+    background-image: url('    {{ url_for('static', filename='bck.jpg') }}     ');
+
+    background-size:cover;
+}
+</style>
+
+
+</head>
+
+
+<body >
+	<div class="main">
+
+		<div class="overlay"></div>
+		<div class="navbar">
+			<div class="logo">Namal <span> HRMS</span></div>
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">VIDEOS</a></li>
+				<li><a href="#">BLOG</a></li>
+				<li><a href="#">PORTFOLIO</a></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li><a href="#">CONTACT US</a></li>
+			</ul>
+		</div>
+		<div class="heading">
+				<h1 class="head">WELCOME TO HR <span>WEBSITE</span></h1>
+				<h3 class="sub">Get the jobs right</h3>	
+				<div class="btns">
+					<a class="btn1" href="http://127.0.0.1:5000/Sign%20Up">Sign Up</a>
+					<a class="btn2" href="http://127.0.0.1:5000/Sign%20In">Sign In Now</a>
+				</div>	
+		</div>
+	</div>	
+</body>
+</html>
